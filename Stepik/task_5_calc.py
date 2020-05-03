@@ -1,0 +1,13 @@
+a = float (input())
+b = float (input())
+oper = str (input (''))
+if oper == '+': print (a + b);
+if oper == '-': print (a - b)
+if oper == '*': print (a * b)
+if oper == 'mod' and b == 0: print ('Деление на 0!')
+if oper == 'mod' and b != 0: print (a % b)
+if oper == 'pow': print (a ** b)
+if oper == 'div' and b == 0: print ('Деление на 0!')
+if oper == 'div'and b != 0: print (a // b)
+if oper == '/' and b == 0: print ('Деление на 0!')
+if oper == '/' and b != 0: print (a / b)
