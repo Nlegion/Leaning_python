@@ -5,4 +5,4 @@
 
 my_list = [1, True, 'текст', [1, True, 'текст']]
 for item in my_list:
-    print(type(item));
+    print(type(item))
