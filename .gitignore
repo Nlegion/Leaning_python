@@ -1069,3 +1069,5 @@ venv/lib/python3.7/site-packages/setuptools/wheel.py
 venv/lib/python3.7/site-packages/setuptools/windows_support.py
 venv/pyvenv.cfg
 School_Work/
+PyQt/__init__.py
+PyQt/PyQt/
