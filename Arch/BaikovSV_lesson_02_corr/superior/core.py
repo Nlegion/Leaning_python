@@ -2,6 +2,11 @@ from quopri import decodestring
 from superior.requests import GetRequests, PostRequests
 import datetime
 import html.parser as hlmtparser
+from pathlib import Path
+import sys
+
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+sys.path.append(str(BASE_DIR))
 
 
 class Application:
@@ -20,12 +25,12 @@ class Application:
             data = PostRequests().get_request_params(env)
             message = Application.decode_value(data)
             now = datetime.datetime.now()
-            print(repr(message))
             name = message['your_name']
             text = message['your_enquiry']
             email = message['your_email']
-            print(f'Месседж от {name} емейл {email} и текстом {text}')
-            with open(f'../BaikovSV_lesson_02/messages/message_{now.strftime("%d%m%Y")}_{now.strftime("%H.%M.%S")}.txt',
+            print(f'Нам пришёл post-запрос: {message}')
+            #print(f'Месседж от {name} емейл {email} и текстом {text}')
+            with open(f'{BASE_DIR}/messages/message_{now.strftime("%d%m%Y")}_{now.strftime("%H.%M.%S")}.txt',
                       'w') as message_file:
                 message_file.write(
                     f'Нам пришло сообщение от: {name} \n емейл: \n {email} \n текстом: \n {text}')

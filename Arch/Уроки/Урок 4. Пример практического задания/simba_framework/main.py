@@ -1,5 +1,5 @@
 from quopri import decodestring
-from simba_framework.requests import GetRequests, PostRequests
+from requests import GetRequests, PostRequests
 
 
 class PageNotFound404:
@@ -30,12 +30,13 @@ class Framework:
 
         if method == 'POST':
             data = PostRequests().get_request_params(environ)
-            request['data'] = data
+            request['data'] = Framework.decode_value(data)
             print(f'Нам пришёл post-запрос: {Framework.decode_value(data)}')
         if method == 'GET':
             request_params = GetRequests().get_request_params(environ)
-            request['request_params'] = request_params
-            print(f'Нам пришли GET-параметры: {request_params}')
+            request['request_params'] = Framework.decode_value(request_params)
+            print(f'Нам пришли GET-параметры:'
+                  f' {Framework.decode_value(request_params)}')
 
         # находим нужный контроллер
         # отработка паттерна page controller
