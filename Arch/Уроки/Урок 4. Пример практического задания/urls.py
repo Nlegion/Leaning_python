@@ -18,7 +18,7 @@ routes = {
     '/': Index(),
     '/about/': About(),
     '/study_programs/': StudyPrograms(),
-    '/courses-list/': CoursesList(),
+    '/course-list/': CoursesList(),
     '/create-course/': CreateCourse(),
     '/create-category/': CreateCategory(),
     '/category-list/': CategoryList(),
