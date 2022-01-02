@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Arch/BaikovSV_lesson_06/superior" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Arch/Уроки/Урок 6. Пример практического задания" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Arch/Уроки/Урок 6. Пример практического задания/patterns" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Arch/BaikovSV_lesson_07" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Arch/BaikovSV_lesson_07/patterns" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

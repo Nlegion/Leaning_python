@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+    Lorem Superior Create Student
+{% endblock %}
+{% block style %}
+	{% include "h-style.html" %}
+{% endblock %}
+{% block headerlogo %}
+	{% include "h-header-logo.html" %}
+{% endblock %}
+{% block headermenu %}
+	{% include "h-menu.html" %}
+{% endblock %}
+{% block sidebar %}
+	{% include "h-sidebar.html" %}
+{% endblock %}
+{% block body %}
+	<div>
+		<li>
+			<a href="/student_list/">Список студентов</a>
+		</li>
+	</div>
+    <div>
+        <h1>Создание студента</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Имя">
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+	{% include "body-index.html" %}
+{% endblock %}
+{% block footer %}
+	{% include "h-footer.html" %}
+{% endblock %}
