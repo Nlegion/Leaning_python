@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+    Lorem Superior
+{% endblock %}
+{% block style %}
+	{% include "h-style.html" %}
+{% endblock %}
+{% block headerlogo %}
+	{% include "h-header-logo.html" %}
+{% endblock %}
+{% block headermenu %}
+	{% include "h-menu.html" %}
+{% endblock %}
+{% block sidebar %}
+	{% include "h-sidebar.html" %}
+{% endblock %}
+{% block body %}
+	<div>
+		<a href="/create_category/">Создать новую категорию</a>
+	</div>
+	<div>
+		<h1>Список существующих категорий</h1>
+		{% for item in objects_list %}
+		<li>
+			{{item.name}} <span>Количество курсов: {{item.course_count()}}</span>
+			<a href="/course_list/?id={{item.id}}">Показать курсы</a>
+		</li>
+		{% endfor %}
+		<br>
+		<hr>
+	</div>
+    <div>
+		<li>
+			<a href="/student_list/">Список студентов</a>
+		</li>
+		<li>
+			<a href="/student_create/">Создать студента</a>
+		</li>
+		<li>
+			<a href="/student_add/">Добавить студента на курс</a>
+		</li>
+	</div>
+	{% include "body-index.html" %}
+{% endblock %}
+{% block footer %}
+	{% include "h-footer.html" %}
+{% endblock %}

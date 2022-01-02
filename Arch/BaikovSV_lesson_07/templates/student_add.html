@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+    Lorem Superior Create Course
+{% endblock %}
+{% block style %}
+	{% include "h-style.html" %}
+{% endblock %}
+{% block headerlogo %}
+	{% include "h-header-logo.html" %}
+{% endblock %}
+{% block headermenu %}
+	{% include "h-menu.html" %}
+{% endblock %}
+{% block sidebar %}
+	{% include "h-sidebar.html" %}
+{% endblock %}
+{% block body %}
+	<div>
+		<li>
+			<a href="/student_list/">Список студентов</a>
+		</li>
+		<li>
+			<a href="/student_create/">Создать студента</a>
+		</li>
+	</div>
+    <h1>Добавление студента на курс</h1>
+    <form method="post">
+        <select size="3" name="course_name">
+            {% for item in courses %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <select size="3" name="student_name">
+            {% for item in students %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Записать</button>
+    </form>
+	{% include "body-index.html" %}
+{% endblock %}
+{% block footer %}
+	{% include "h-footer.html" %}
+{% endblock %}

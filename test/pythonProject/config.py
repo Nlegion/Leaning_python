@@ -1,0 +1,3 @@
+API_TOKEN = '5045991672:AAEIBu0hO8iCHufLNizeFIc97ZA1PiqVGlQ'
+token = "666"
+user_id = 111222333

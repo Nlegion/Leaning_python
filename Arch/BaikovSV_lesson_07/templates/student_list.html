@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}
+    Lorem Superior Students
+{% endblock %}
+{% block style %}
+	{% include "h-style.html" %}
+{% endblock %}
+{% block headerlogo %}
+	{% include "h-header-logo.html" %}
+{% endblock %}
+{% block headermenu %}
+	{% include "h-menu.html" %}
+{% endblock %}
+{% block sidebar %}
+	{% include "h-sidebar.html" %}
+{% endblock %}
+{% block body %}
+	<div>
+		<li>
+			<a href="/student_create/">Создать студента</a>
+		</li>
+		<li>
+			<a href="/student_add/">Добавить студента на курс</a>
+		</li>
+	</div>
+    <h1>Список студентов</h1>
+    <div>
+
+        {% for item in objects_list %}
+        <li>
+            {{item.name}}
+            {% for course in item.courses %}
+                {{course.name}}
+            {% endfor %}
+        </li>
+        {% endfor %}
+    </div>
+	{% include "body-index.html" %}
+{% endblock %}
+{% block footer %}
+	{% include "h-footer.html" %}
+{% endblock %}
